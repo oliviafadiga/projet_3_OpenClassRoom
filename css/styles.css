@@ -1,0 +1,458 @@
+/**
+ * @author Olivia Fadiga olivia.fadiga.pa@hotmail.com
+ *
+ * TABLE DES MATIÈRES
+ * Normalize
+ * Utilitaires
+ * typographie
+ * Règles générales
+ * Mise en page
+ *** Header 
+ *** Formulaire
+ *** Section fonctionnement 
+ *** Bouton Explorer 
+ *** Section restaurant page accueil
+ *** Bouton favoris Restaurants
+ ***** Menus restaurants (page menu)
+ *** Pied de page (Footer)
+ ** Media query
+ */
+
+
+   /* Normalize
+   ========================================================================== */
+   @import url(_normalize.css);
+
+   /* Utilitaires
+  ========================================================================== */
+   @import url(_utilitaires.css);
+
+   /* Charte typographique
+   ========================================================================== */
+   @import url(_typo.css);   
+
+   /* header */
+  header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+  }
+  header .header_arrow {
+    font-size: 30px;
+    margin-left: 30px;
+    position: absolute;
+  }
+  header .imgLogo {
+    width: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  /* Formulaire */
+
+  .formulaireDecouverte {
+    height: 320px;
+  }
+  .formulaireDecouverte .formulaire {
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #d8dad9;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .formulaireDecouverte .formulaire_logo {
+    margin-right: 20px;
+    font-size: 22px;
+  }
+  .formulaireDecouverte .textDecouverte {
+    text-align: center;
+    height: auto;
+    background-color: #f5f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulaireDecouverte .textDecouverte h2 {
+    width: 60%;
+  }
+  .formulaireDecouverte .textDecouverte p {
+    width: 80%;
+  }
+  .formulaireDecouverte .textDecouverte a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Section fonctionnement */
+  .fonctionnement {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .fonctionnement_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .listeFonctionnement{
+    list-style: none;
+  }
+  .btn {
+    width: 90%;
+    min-width: 280px;
+    max-width: 350px;
+    height: 70px;
+    text-decoration: none;
+    background-color: #f5f4f4;
+    border-radius: 20px;
+    margin: 15px 0 15px 0;
+    box-shadow: 0px 5px 15px 2px #d6d6d6;
+    display: flex;
+    align-items: center;
+  }
+  .btn:hover {
+    background-color: rgba(147, 86, 220, 0.2);
+  }
+  .btn:hover i {
+    color: #9356DC;
+  }
+  .btn_chiffre {
+    width: 25px;
+    height: 25px;
+    background-color: #9356DC;
+    border-radius: 20px;
+    color: #ffffff;
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn i {
+    margin: 0 25px 0 25px;
+    opacity: 0.8;
+  }
+   /* Bouton Explorer */
+ .btnExplorer {
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: #ffffff;
+    border-radius: 20px;
+    margin: 15px 0 30px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .btnExplorer {
+    opacity: 0.8;
+    box-shadow: 0px 5px 15px 5px #d6d6d6;
+  }
+
+  /* Section restaurant page accueil */
+
+  .section_restaurant {
+    background-color: #f5f4f4;
+    padding: 20px;
+  }
+  .conteneur_articles_restaurant {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .conteneur_articles_restaurant .info-resto {
+    box-shadow: 0px 5px 15px 2px #d6d6d6;
+    border-radius: 15px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    margin: 10px;
+  } 
+  .img-resto{
+    width: 100%;
+    object-fit: cover;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .conteneur_articles_restaurant .description-resto {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .conteneur_articles_restaurant .description-resto p {
+    font-size: 18px;
+    margin: 5px;
+  }
+  .conteneur_articles_restaurant .article_bloc_absolut {
+    padding-right: 10px;
+  }
+  .carte{
+    display: flex;
+    justify-content: space-between;
+  }
+   /* Bouton favoris menu */
+   .far {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    width: 27px;
+    cursor: pointer;
+    transition: all 1s;
+    z-index: 0;
+  }
+  .far .fa-solid {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    width: 27px;
+    height: 0px;
+    cursor: pointer;
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s linear 0s;
+    z-index: 1;
+  }
+  .far:hover {
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .far:hover .fa-solid {
+    width: 27px;
+    height: 27px;
+  } 
+
+/* Menus restaurants */
+.main {
+    background-color: #f5f4f4;
+  }
+  .main h1 {
+    margin-right: 50px;
+  }
+  .main h2 {
+    font-size: 18px;
+  }
+  .main h2::after {
+    content: ".";
+    display: block;
+    border-bottom: 4px solid #99e2d0;
+    width: 45px;
+    margin-top: 5px;
+    font-size: 0px;
+  }
+  .main_img {
+    height: 250px;
+    border-radius: 0;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+  }
+  .main_restau {
+    background-color: #f5f4f4;
+    margin-top: -40px;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main .section_bloc {
+    margin-bottom: 1%;
+    background-color: #f5f4f4;
+    padding: 20px;
+  }
+  .main .section_bloc .carte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .section_bloc .carte_plat {
+    width: 100%;
+    max-width: 680px;
+    height: 70px;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 2px #d6d6d6;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: menuanimation 1.5s both;
+  }
+  .main .section_bloc .carte_plat_texte {
+    width: 85%;
+    padding: 5px 0 5px 10px;
+    font-size: 14px;
+    margin: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .section_bloc .carte_plat_texte p {
+    font-size: 16px;
+    margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main .section_bloc .carte_plat_prix {
+    width: 15%;
+    font-weight: bold;
+  }
+  .main .section_bloc .carte_plat_prix p {
+    text-align: right;
+    margin: 32px 15px 0 0;
+  }
+  .main .section_bloc .carte_plat_okmenu {
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #99e2d0;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+  }
+  .main .section_bloc .carte_plat:hover .carte_plat_okmenu {
+    width: 80px;
+  }
+  .main .section_bloc .carte_plat:hover .carte_plat_okmenu i {
+    transform: rotateZ(-360deg);
+    transition: 0.3s;
+  }
+  .main .section_bloc .plat_1 {
+    animation-delay: 0.2s;
+  }
+  .main .section_bloc .plat_2 {
+    animation-delay: 0.4s;
+  }
+  .main .section_bloc .plat_3 {
+    animation-delay: 0.6s;
+  }
+  .main .section_bloc .plat_4 {
+    animation-delay: 0.8s;
+  }
+  .main .btn_validateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes menuanimation {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .btn_valid {
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: #ffffff;
+    border-radius: 20px;
+    margin: 15px 0 30px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .btn_valid:hover {
+    opacity: 0.8;
+    box-shadow: 0px 5px 15px 5px #d6d6d6;
+  }
+  
+/* footer */
+footer {
+    background-color: #424847;
+    padding: 20px;
+  }
+  footer h4 {
+    font-family: "Shrikhand";
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 20px 0 20px 0;
+    color: #ffffff;
+  }
+  footer ul {
+    list-style-type: none;
+  }
+  footer ul a {
+    color: #ffffff;
+    width: fit-content;
+    margin: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul a i {
+    margin-right: 10px;
+    width: 18px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 1024px) {
+    .fonctionnement_menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .fonctionnement_menu span {
+    font-weight: bold;
+  }
+    @media screen and (min-width: 1024px) {
+    .btn {
+      margin: 15px 20px 15px 20px;
+    }
+  }
