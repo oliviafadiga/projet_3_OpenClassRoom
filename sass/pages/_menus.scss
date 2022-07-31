@@ -1,0 +1,106 @@
+.main {
+    background-color: $colour-menu;
+    h1 {
+        margin-right: 50px;
+    }
+    h2 {
+        font-size: 18px;
+        &:after {
+            content: ".";
+            display: block;
+            border-bottom: 4px solid #99e2d0;
+            width: 45px;
+            margin-top: 5px;
+            font-size: 0px;
+        }
+    }
+    &_img {
+        height: 250px;
+        border-radius: 0;
+        background-position: center;
+        background-size: cover;
+        width: auto;
+        }
+    &_restau {
+        background-color: #f5f4f4;
+        margin-top: -40px;
+        border-radius: 35px 35px 0 0;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .section {
+        justify-content: center;
+      
+      &_bloc {
+        margin-bottom: 1%;
+        background-color: #f5f4f4;
+        padding: 20px;
+        .carte {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            &_plat {
+                width: 100%;
+                max-width: 680px;
+                height: 70px;
+                margin: 10px 0 10px 0;
+                cursor: pointer;
+                overflow: hidden;
+                background-color: #ffffff;
+                border-radius: 20px;
+                box-shadow: 0px 5px 15px 2px #d6d6d6;
+                display: flex;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                animation: menuanimation 1.5s both;
+                &_prix {
+                    width: 15%;
+                    font-weight: bold;
+                    p {
+                        text-align: right;
+                        margin: 32px 15px 0 0;
+                      }
+                  }
+                  &_okmenu {
+                    display: inline-block;
+                    width: 0px;
+                    overflow: hidden;
+                    height: 100%;
+                    background-color: #99e2d0;
+                    color: #ffffff;
+                    font-size: 24px;
+                    border-radius: 0 15px 15px 0;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.4s;
+                  }  
+                &_texte {
+                    width: 85%;
+                    padding: 5px 0 5px 10px;
+                    font-size: 14px;
+                    margin: 5px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        font-size: 16px;
+                        margin: 5px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      }
+                  }
+              }
+          }
+      }
+    }
+}

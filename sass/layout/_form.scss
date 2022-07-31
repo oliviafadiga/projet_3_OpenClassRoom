@@ -1,0 +1,30 @@
+.formulaireDecouverte {
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: $colour-form;
+    opacity: 0.7;
+    @include align-center-center;
+    &__logo {
+        margin-right: 20px;
+        font-size: 22px;
+    }
+    &__text {
+        flex-direction: column;
+        height: auto;
+        background-color: #f5f4f4;
+        display: flex;
+        align-items: center;
+        @include text-center-center;
+        h2 {
+            width: 60%;
+          }
+        p {
+            width: 80%;
+          }
+          a {
+            @include align-center-center;
+          }
+        
+      }
+}

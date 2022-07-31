@@ -1,0 +1,17 @@
+.header {
+    height: 80px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px black;  
+    &__logo {
+        width: 200px;
+        display: block;
+        margin: auto;
+    }
+    &_arrow {
+        font-size: 30px;
+        margin-left: 30px;
+        position: absolute;
+      }
+}

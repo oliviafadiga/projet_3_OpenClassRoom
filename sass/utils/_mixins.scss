@@ -1,0 +1,26 @@
+@mixin box-shadow {
+    box-shadow: 0px 5px 15px 2px $colour-accent;
+}
+
+@mixin border-radius{
+    border-radius: 20px;
+}
+
+@mixin img-ratio {
+    height: 250px;
+    border-radius: 0;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+}
+@mixin text-center-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+@mixin align-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

@@ -4,45 +4,50 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="sass/main.css">
     <script src="https://kit.fontawesome.com/e3a63093f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <header class="entete"> 
-                  <a href="index.html" class="logo"><img src="ohmyfood.png" class="imgLogo" alt="ohmyfood"></a>
+        <div class="loader_Spinner">  
+            <div class="timer"> 
+                <span class="loader"></span>
+             </div>
+        </div>
+        <header class="header"> 
+                  <a href="index.html" class="header__logo"><img src="ohmyfood.png" class="imgLogo" alt="ohmyfood"></a>
         </header>  
         <main>
             <section class="formulaireDecouverte">
                 <form action="#" method="post" class="formulaire">
-                    <div><i class="formulaire_logo fa-solid fa-location-dot "></i>Paris, Belleville</div>
+                    <div><i class="formulaireDecouverte__logo fa-solid fa-location-dot "></i>Paris, Belleville</div>
                 </form>
                     
-                    <div class="textDecouverte">
+                    <div class="formulaireDecouverte__text">
                         <h1>Réservez le menu qui vous convient</h1>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                        <button class="btnExplorer" type="button">Explorer nos restaurants</button>
+                        <button class="formulaireDecouverte__btn" type="button">Explorer nos restaurants</button>
                     </div>
             </section>
 
             <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
-                <div class="fonctionnement_menu">
+                <div class="fonctionnement__menu">
                     <ul class="listeFonctionnement">
-                        <li class="listeFonctionnement_items">
+                        <li class="listeFonctionnement__items">
                             <a href="#" class="btn">
                                 <div class="btn_chiffre">1</div>
                                 <i class="fa-solid fa-mobile-screen-button"></i>
                                 Choisissez un restaurant
                             </a>
                         </li>
-                        <li class="listeFonctionnement_items">
+                        <li class="listeFonctionnement__items">
                             <a href="#" class="btn">
                                 <div class="btn_chiffre">2</div>
                                 <i class="fa-solid fa-list"></i>
                                  Composez votre menu
                             </a>     
                         </li>
-                        <li class="listeFonctionnement_items">
+                        <li class="listeFonctionnement__items">
                             <a href="#" class="btn">
                                 <div class="btn_chiffre">3</div>
                                 <i class="fa-solid fa-store"></i>
@@ -54,12 +59,13 @@
             </section>
             <section class="sectionRestaurants">
                 <h2>Restaurants</h2>
-                <div class="conteneur_articles_restaurant">
+                <div class="sectionRestaurants__conteneur-articles">
                     <article class="info-resto">
                         <a href="menus/menu1.html" class="liens-resto">
+                            <div class="sectionRestaurants__card-new"><p>Nouveau</p></div>
                             <img class="img-resto" src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="palette du gout"/> 
                             <div class="carte"> 
-                                <div class="description-resto">
+                                <div class="sectionRestaurants__description">
                                     <h3 class="title-contenair h3">La palette du goût</h3>
                                     <p class="lieu">Ménilmontant</p>
                                 </div> 
@@ -73,9 +79,10 @@
                     </article>
                 <article class="info-resto">
                     <a href="menus/menu2.html" class="liens-resto">
+                        <div class="sectionRestaurants__card-new"><p>Nouveau</p></div>
                         <img class="img-resto" src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="palette du gout"/> 
                         <div class="carte"> 
-                            <div class="description-resto">
+                            <div class="sectionRestaurants__description">
                                 <h3 class="title-contenair h3">La note enchantée</h3>
                                 <p class="lieu">Charonne</p>
                             </div>
@@ -91,7 +98,7 @@
                     <a href="menus/menu3.html" class="liens-resto">
                         <img class="img-resto" src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="palette du gout"/> 
                         <div class="carte">
-                            <div class="description-resto">
+                            <div class="sectionRestaurants__description">
                                 <h3 class="title-contenair h3">à la française</h3>
                                 <p class="lieu">Cité Rouge</p>
                             </div> 
@@ -107,7 +114,7 @@
                     <a href="menus/menu4.html" class="liens-resto">
                         <img class="img-resto" src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="palette du gout"/> 
                         <div class="carte">
-                            <div class="description-resto">
+                            <div class="sectionRestaurants__description">
                                 <h3 class="title-contenair h3">Le délice des sens</h3>
                                 <p class="lieu">Folie-Méricourt</p>
                             </div> 

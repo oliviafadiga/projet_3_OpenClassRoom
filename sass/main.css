@@ -1,0 +1,347 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+html h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 500;
+}
+html h3 {
+  font-size: 18px;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body {
+  margin: 0%;
+  /* 16px pour toutes les largeurs d'écran */
+  font-size: 16px;
+  font-size: 1.6rem;
+  /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+  line-height: 1.375;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+}
+.header__logo {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+.header_arrow {
+  font-size: 30px;
+  margin-left: 30px;
+  position: absolute;
+}
+
+/* footer */
+footer {
+  background-color: #424847;
+  padding: 20px;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 20px 0 20px 0;
+  color: #fff;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul a {
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer ul a i {
+  margin-right: 10px;
+  width: 18px;
+}
+
+.formulaireDecouverte {
+  height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #d8dad9;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formulaireDecouverte__logo {
+  margin-right: 20px;
+  font-size: 22px;
+}
+.formulaireDecouverte__text {
+  flex-direction: column;
+  height: auto;
+  background-color: #f5f4f4;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.formulaireDecouverte__text h2 {
+  width: 60%;
+}
+.formulaireDecouverte__text p {
+  width: 80%;
+}
+.formulaireDecouverte__text a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section fonctionnement */
+.fonctionnement {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.fonctionnement__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listeFonctionnement {
+  list-style: none;
+}
+.listeFonctionnement .btn {
+  width: 90%;
+  min-width: 280px;
+  max-width: 350px;
+  height: 70px;
+  text-decoration: none;
+  background-color: #f5f4f4;
+  border-radius: 20px;
+  margin: 15px 0 15px 0;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  display: flex;
+  align-items: center;
+}
+.listeFonctionnement .btn i {
+  margin: 0 25px 0 25px;
+  opacity: 0.8;
+}
+.listeFonctionnement .btn_chiffre {
+  width: 25px;
+  height: 25px;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-left: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listeFonctionnement .btn:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.listeFonctionnement .btn:hover i {
+  color: #9356DC;
+}
+
+/* Section restaurant page accueil */
+.section_restaurant {
+  background-color: #f5f4f4;
+  padding: 20px;
+}
+.section_restaurant__card-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #99e2d0;
+  margin: 20px;
+}
+.section_restaurant__card-new p {
+  color: #1b6150;
+  padding: 10px 20px;
+  margin: 0;
+}
+.section_restaurant__conteneur-articles {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section_restaurant__conteneur-articles .info-resto {
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  border-radius: 15px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  margin: 10px;
+}
+.section_restaurant__description {
+  padding: 10px;
+  flex-direction: column;
+}
+.section_restaurant__description p {
+  font-size: 18px;
+  margin: 5px;
+}
+.section_restaurant .article_bloc_absolut {
+  padding-right: 10px;
+}
+.section_restaurant .carte {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  background-color: #f5f4f4;
+}
+.main h1 {
+  margin-right: 50px;
+}
+.main h2 {
+  font-size: 18px;
+}
+.main h2:after {
+  content: ".";
+  display: block;
+  border-bottom: 4px solid #99e2d0;
+  width: 45px;
+  margin-top: 5px;
+  font-size: 0px;
+}
+.main_img {
+  height: 250px;
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+}
+.main_restau {
+  background-color: #f5f4f4;
+  margin-top: -40px;
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .section {
+  justify-content: center;
+}
+.main .section_bloc {
+  margin-bottom: 1%;
+  background-color: #f5f4f4;
+  padding: 20px;
+}
+.main .section_bloc .carte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.main .section_bloc .carte_plat {
+  width: 100%;
+  max-width: 680px;
+  height: 70px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-animation: menuanimation 1.5s both;
+          animation: menuanimation 1.5s both;
+}
+.main .section_bloc .carte_plat_prix {
+  width: 15%;
+  font-weight: bold;
+}
+.main .section_bloc .carte_plat_prix p {
+  text-align: right;
+  margin: 32px 15px 0 0;
+}
+.main .section_bloc .carte_plat_okmenu {
+  display: inline-block;
+  width: 0px;
+  overflow: hidden;
+  height: 100%;
+  background-color: #99e2d0;
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+.main .section_bloc .carte_plat_texte {
+  width: 85%;
+  padding: 5px 0 5px 10px;
+  font-size: 14px;
+  margin: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+.main .section_bloc .carte_plat_texte p {
+  font-size: 16px;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}/*# sourceMappingURL=main.css.map */

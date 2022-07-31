@@ -1,0 +1,20 @@
+{
+  "name": "projet_3_fadiga_olivia",
+  "version": "1.0.0",
+  "description": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliviafadiga/projet_3_OpenClassRoom.git"
+  },
+  "author": "olivia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliviafadiga/projet_3_OpenClassRoom/issues"
+  },
+  "homepage": "https://github.com/oliviafadiga/projet_3_OpenClassRoom#readme"
+  
+}
