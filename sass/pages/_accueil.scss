@@ -44,7 +44,7 @@
   }
 /* Section restaurant page accueil */
 
-.section_restaurant {
+.sectionRestaurants {
     background-color: #f5f4f4;
     padding: 20px;
     &__card-new{
@@ -72,6 +72,13 @@
             max-width: 550px;
             margin: 10px;
           }
+          .img-resto{
+            width: 100%;
+            object-fit: cover;
+            height: 150px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
     
     }
     &__description {
@@ -90,3 +97,30 @@
         justify-content: space-between;
       }
   }  
+  /* Bouton favoris menu */
+  .far {
+    margin-right: 3%;
+  align-self: baseline;
+  font-size: 35px;
+  
+  
+  &:hover {
+    font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: apparition 1s ease-in-out forwards;
+          animation: apparition 1s ease-in-out forwards;
+  }
+}
+
+  @keyframes apparition {
+    0%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+    
+  }

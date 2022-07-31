@@ -40,7 +40,6 @@ body {
   margin: 0%;
   /* 16px pour toutes les largeurs d'écran */
   font-size: 16px;
-  font-size: 1.6rem;
   /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
   line-height: 1.375;
 }
@@ -57,6 +56,29 @@ button {
   font-size: 14px;
 }
 
+.btn_validateur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_validateur .btn_valid {
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  color: #fff;
+  border-radius: 20px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.btn_validateur .btn_valid:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 15px 5px #d6d6d6;
+}
+
 .header {
   height: 80px;
   display: flex;
@@ -70,9 +92,15 @@ button {
   margin: auto;
 }
 .header_arrow {
+  left: 5px;
   font-size: 30px;
-  margin-left: 30px;
+  margin-left: 20px;
   position: absolute;
+}
+.header .imgLogo {
+  width: 200px;
+  display: block;
+  margin: auto;
 }
 
 /* footer */
@@ -106,6 +134,15 @@ footer ul a i {
 }
 
 .formulaireDecouverte {
+  height: 320px;
+  display: flex;
+  background-color: #f5f4f4;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.formulaireDecouverte .formulaire {
+  width: 100%;
   height: 60px;
   font-size: 18px;
   font-weight: 600;
@@ -115,6 +152,24 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
+.formulaireDecouverte__btn {
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  color: #fff;
+  border-radius: 20px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.2s;
+}
+.formulaireDecouverte__btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 15px 5px #d6d6d6;
+}
 .formulaireDecouverte__logo {
   margin-right: 20px;
   font-size: 22px;
@@ -122,12 +177,14 @@ footer ul a i {
 .formulaireDecouverte__text {
   flex-direction: column;
   height: auto;
-  background-color: #f5f4f4;
-  display: flex;
   align-items: center;
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.formulaireDecouverte__text .h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 .formulaireDecouverte__text h2 {
   width: 60%;
@@ -191,11 +248,11 @@ footer ul a i {
 }
 
 /* Section restaurant page accueil */
-.section_restaurant {
+.sectionRestaurants {
   background-color: #f5f4f4;
   padding: 20px;
 }
-.section_restaurant__card-new {
+.sectionRestaurants__card-new {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,19 +260,19 @@ footer ul a i {
   background: #99e2d0;
   margin: 20px;
 }
-.section_restaurant__card-new p {
+.sectionRestaurants__card-new p {
   color: #1b6150;
   padding: 10px 20px;
   margin: 0;
 }
-.section_restaurant__conteneur-articles {
+.sectionRestaurants__conteneur-articles {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
-.section_restaurant__conteneur-articles .info-resto {
+.sectionRestaurants__conteneur-articles .info-resto {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   border-radius: 15px;
   background-color: #ffffff;
@@ -223,22 +280,64 @@ footer ul a i {
   max-width: 550px;
   margin: 10px;
 }
-.section_restaurant__description {
+.sectionRestaurants__conteneur-articles .img-resto {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.sectionRestaurants__description {
   padding: 10px;
   flex-direction: column;
 }
-.section_restaurant__description p {
+.sectionRestaurants__description p {
   font-size: 18px;
   margin: 5px;
 }
-.section_restaurant .article_bloc_absolut {
+.sectionRestaurants .article_bloc_absolut {
   padding-right: 10px;
 }
-.section_restaurant .carte {
+.sectionRestaurants .carte {
   display: flex;
   justify-content: space-between;
 }
 
+/* Bouton favoris menu */
+.far {
+  margin-right: 3%;
+  align-self: baseline;
+  font-size: 35px;
+}
+.far:hover {
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: apparition 1s ease-in-out forwards;
+  animation: apparition 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main {
   background-color: #f5f4f4;
 }
@@ -344,4 +443,18 @@ footer ul a i {
   margin: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* image menu */
+.img_palette {
+  background-image: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.img_note {
+  background-image: url(../images/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.img_franc {
+  background-image: url(../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.img_delice {
+  background-image: url(../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }/*# sourceMappingURL=main.css.map */
