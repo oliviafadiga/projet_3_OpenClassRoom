@@ -24,3 +24,18 @@
     justify-content: center;
     
 }
+@mixin desktop-only {
+    @media screen and (min-width:map-get($breakpoints, "desktop")){
+        @content;
+    }
+}
+@mixin table-only {
+    @media screen and (min-width:map-get($breakpoints, "table")){
+        @content;
+    }
+}
+@mixin bigScreen-only {
+    @media screen and (min-width:map-get($breakpoints, "bigScreen")){
+        @content;
+    }
+}

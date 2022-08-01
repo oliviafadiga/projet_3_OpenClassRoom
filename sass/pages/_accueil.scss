@@ -5,6 +5,7 @@
     &__menu {
         @include align-center-center;
       }
+
   }
   .listeFonctionnement{
     list-style: none;
@@ -14,7 +15,7 @@
         max-width: 350px;
         height: 70px;
         text-decoration: none;
-        background-color:$colour-menu;
+        background-color: $colour-menu;
         border-radius: 20px;
         margin: 15px 0 15px 0;
         box-shadow: 0px 5px 15px 2px $colour-accent;
@@ -29,7 +30,7 @@
             height: 25px;
             background-color:$colour-primary;
             border-radius: 20px;
-            color: #ffffff;
+            color: $colour-white;
             margin-left: -15px;
             @include align-center-center;
           }
@@ -45,14 +46,18 @@
 /* Section restaurant page accueil */
 
 .sectionRestaurants {
-    background-color: #f5f4f4;
+    background-color: $colour-menu;
     padding: 20px;
     &__card-new{
-        @include align-center-center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: transparent;
         position: absolute;
-        background: $colour-newbg;
+        width: 75%;
         margin: 20px; 
         p {
+            background: $colour-newbg;
             color: $colour-newp;
             padding: 10px 20px;
             margin: 0;
@@ -65,9 +70,9 @@
         flex-wrap: wrap;
         width: 100%;
         .info-resto {
-            box-shadow: 0px 5px 15px 2px #d6d6d6;
+            box-shadow: 0px 5px 15px 2px $colour-accent;
             border-radius: 15px;
-            background-color: #ffffff;
+            background-color: $colour-white;
             width: 100%;
             max-width: 550px;
             margin: 10px;
@@ -99,9 +104,10 @@
   }  
   /* Bouton favoris menu */
   .far {
+    margin-top: 10px;
     margin-right: 3%;
-  align-self: baseline;
-  font-size: 35px;
+    align-self: baseline;
+    font-size: 30px;
   
   
   &:hover {

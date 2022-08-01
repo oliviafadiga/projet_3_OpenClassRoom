@@ -3,6 +3,7 @@ $colour-secondary: #FF79DA;
 $colour-tertiaire: #99E2D0;
 $colour-accent:  #d6d6d6;
 $colour-white: #fff;
+$colour-black: #000000;
 $colour-form: #d8dad9;
 $colour-menu: #f5f4f4;
 $colour-footer:#424847;
@@ -11,3 +12,7 @@ $colour-newp: #1b6150;
 
 $shadow-size: 5px;
 $layout-margin: 6rem;
+$breakpoints :(
+"desktop" :1024px,
+"table":600px,
+"bigScreen":2130px,)
