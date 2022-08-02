@@ -1,13 +1,78 @@
+/*loader spinner*/
+.loader_Spinner{
+  animation: fade-out 1s ease-out 1.5s;
+  animation-fill-mode: forwards;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  opacity: 1;
+}
+.lds-hourglass {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  @include align-center-center;
+}
+.timer{
+  @include align-center-center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.lds-hourglass:after {
+  content: " ";
+  @include align-center-center;
+  border-radius: 50%;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid $colour-primary;
+  border-color:$colour-primary transparent $colour-primary transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
+}
 /* Section fonctionnement */
 .fonctionnement {
     margin-bottom: 30px;
     padding: 20px;
     &__menu {
         @include align-center-center;
+        @include desktop-only{
+          justify-content: space-around;
+         }
       }
 
   }
   .listeFonctionnement{
+   @include desktop-only{
+    display: contents;
+   }
     list-style: none;
     .btn {
         width: 90%;
@@ -21,6 +86,12 @@
         box-shadow: 0px 5px 15px 2px $colour-accent;
         display: flex;
         align-items: center;
+        @include desktop-only{
+          width: 100%;
+          height: 60px;
+          min-width: 350px;
+          max-width: 500px;
+         }
         i {
             margin: 0 25px 0 25px;
             opacity: 0.8;
@@ -56,6 +127,9 @@
         position: absolute;
         width: 75%;
         margin: 20px; 
+        @include desktop-only{
+          width: 35%;
+         }
         p {
             background: $colour-newbg;
             color: $colour-newp;

@@ -54,25 +54,19 @@
     }
     .section {
         justify-content: center;
-      
+        @include desktop-only{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+         }
       &_bloc {
         margin-bottom: 1%;
         background-color: $colour-menu;
         padding: 20px;
-        .plat{
-          &_1 {
-          animation-delay: 0.2s;
-          }
-          &_2 {
-            animation-delay: 0.4s;
-          }
-          &_3 {
-            animation-delay: 0.6s;
-          }
-          &_4 {
-            animation-delay: 0.8s;
-          }
-        }
+        @include desktop-only{
+          width: 50%;
+         }
+       
         .carte {
             display: flex;
             align-items: center;
@@ -94,12 +88,26 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                animation: menuanimation 1.5s both;
+                animation: menuanimation 3s both;
                 &:hover .carte_plat_okmenu {
                   width: 80px;
                   i {
                     transform: rotateZ(-360deg);
                     transition: 0.3s;
+                  }
+                }
+                .plat{
+                  &_1 {
+                    animation-delay: 2s;
+                  }
+                  &_2 {
+                    animation-delay: 0.4s;
+                  }
+                  &_3 {
+                    animation-delay: 1s;
+                  }
+                  &_4 {
+                    animation-delay: 2s;
                   }
                 }
                 &_prix {

@@ -37,7 +37,7 @@ html h3 {
 }
 
 body {
-  margin: 0%;
+  margin: auto;
   /* 16px pour toutes les largeurs d'écran */
   font-size: 16px;
   /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
@@ -198,6 +198,108 @@ footer ul a i {
   justify-content: center;
 }
 
+/*loader spinner*/
+.loader_Spinner {
+  -webkit-animation: fade-out 1s ease-out 1.5s;
+          animation: fade-out 1s ease-out 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  opacity: 1;
+}
+
+.lds-hourglass {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #9356DC;
+  border-color: #9356DC transparent #9356DC transparent;
+  -webkit-animation: lds-hourglass 1.2s infinite;
+          animation: lds-hourglass 1.2s infinite;
+}
+
+@-webkit-keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
+}
 /* Section fonctionnement */
 .fonctionnement {
   margin-bottom: 30px;
@@ -208,9 +310,19 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .fonctionnement__menu {
+    justify-content: space-around;
+  }
+}
 
 .listeFonctionnement {
   list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .listeFonctionnement {
+    display: contents;
+  }
 }
 .listeFonctionnement .btn {
   width: 90%;
@@ -224,6 +336,14 @@ footer ul a i {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .listeFonctionnement .btn {
+    width: 100%;
+    height: 60px;
+    min-width: 350px;
+    max-width: 500px;
+  }
 }
 .listeFonctionnement .btn i {
   margin: 0 25px 0 25px;
@@ -260,6 +380,11 @@ footer ul a i {
   position: absolute;
   width: 75%;
   margin: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .sectionRestaurants__card-new {
+    width: 35%;
+  }
 }
 .sectionRestaurants__card-new p {
   background: #99e2d0;
@@ -393,26 +518,22 @@ footer ul a i {
 .main .section {
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .main .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
 .main .section_bloc {
   margin-bottom: 1%;
   background-color: #f5f4f4;
   padding: 20px;
 }
-.main .section_bloc .plat_1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.main .section_bloc .plat_2 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.main .section_bloc .plat_3 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.main .section_bloc .plat_4 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+@media screen and (min-width: 1024px) {
+  .main .section_bloc {
+    width: 50%;
+  }
 }
 .main .section_bloc .carte {
   display: flex;
@@ -436,8 +557,8 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation: menuanimation 1.5s both;
-          animation: menuanimation 1.5s both;
+  -webkit-animation: menuanimation 3s both;
+          animation: menuanimation 3s both;
 }
 .main .section_bloc .carte_plat:hover .carte_plat_okmenu {
   width: 80px;
@@ -445,6 +566,22 @@ footer ul a i {
 .main .section_bloc .carte_plat:hover .carte_plat_okmenu i {
   transform: rotateZ(-360deg);
   transition: 0.3s;
+}
+.main .section_bloc .carte_plat .plat_1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.main .section_bloc .carte_plat .plat_2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.main .section_bloc .carte_plat .plat_3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.main .section_bloc .carte_plat .plat_4 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .main .section_bloc .carte_plat_prix {
   width: 15%;
