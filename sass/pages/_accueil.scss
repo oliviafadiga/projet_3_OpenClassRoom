@@ -130,6 +130,7 @@
         @include desktop-only{
           width: 35%;
          }
+
         p {
             background: $colour-newbg;
             color: $colour-newp;
@@ -148,8 +149,11 @@
             border-radius: 15px;
             background-color: $colour-white;
             width: 100%;
-            max-width: 550px;
             margin: 10px;
+            @include desktop-only{
+              max-width: 550px;
+             }
+            
           }
           .img-resto{
             width: 100%;

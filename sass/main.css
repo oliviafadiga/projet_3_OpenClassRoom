@@ -404,8 +404,12 @@ footer ul a i {
   border-radius: 15px;
   background-color: #fff;
   width: 100%;
-  max-width: 550px;
   margin: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .sectionRestaurants__conteneur-articles .info-resto {
+    max-width: 550px;
+  }
 }
 .sectionRestaurants__conteneur-articles .img-resto {
   width: 100%;
