@@ -4,7 +4,7 @@
   animation-fill-mode: forwards;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: $colour-white;
   position: fixed;
   top: 0;
   z-index: 20;
@@ -190,7 +190,6 @@
   background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: apparition 1s ease-in-out forwards;
           animation: apparition 1s ease-in-out forwards;
   }
 }

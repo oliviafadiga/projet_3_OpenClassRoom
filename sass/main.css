@@ -206,7 +206,7 @@ footer ul a i {
           animation-fill-mode: forwards;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 20;
@@ -446,7 +446,7 @@ footer ul a i {
           background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: apparition 1s ease-in-out forwards;
-  animation: apparition 1s ease-in-out forwards;
+          animation: apparition 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes apparition {
