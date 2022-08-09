@@ -68,10 +68,7 @@
          }
        
         .carte {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            display: flex;
+            @include align-center-center;
             flex-direction: column;
             &_plat {
                 width: 100%;
@@ -79,16 +76,13 @@
                 height: 70px;
                 margin: 10px 0 10px 0;
                 cursor: pointer;
-                overflow: hidden;
+                @include hidden;
                 background-color: $colour-white;
                 border-radius: 20px;
                 box-shadow: 0px 5px 15px 2px $colour-accent;
                 display: flex;
                 align-items: center;
-                display: flex;
-                align-items: center;
                 justify-content: space-between;
-                animation: menuanimation 3s both;
                 &:hover .carte_plat_okmenu {
                   width: 80px;
                   i {
@@ -96,20 +90,7 @@
                     transition: 0.3s;
                   }
                 }
-                .plat{
-                  &_1 {
-                    animation-delay: 2s;
-                  }
-                  &_2 {
-                    animation-delay: 0.4s;
-                  }
-                  &_3 {
-                    animation-delay: 1s;
-                  }
-                  &_4 {
-                    animation-delay: 2s;
-                  }
-                }
+                
                 &_prix {
                     width: 15%;
                     font-weight: bold;
@@ -121,16 +102,14 @@
                   &_okmenu {
                     display: inline-block;
                     width: 0px;
-                    overflow: hidden;
+                    @include hidden;
                     height: 100%;
                     background-color:$colour-tertiaire;
                     color: $colour-white;
                     font-size: 24px;
                     border-radius: 0 15px 15px 0;
                     cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include align-center-center;
                     transition: all 0.4s;
                   }  
                   &_texte {
@@ -138,14 +117,14 @@
                     padding: 5px 0 5px 10px;
                     font-size: 14px;
                     margin: 5px;
-                    overflow: hidden;
+                    @include hidden;
                     white-space: nowrap;
                     display: flex;
                     flex-direction: column;
                     p {
                         font-size: 16px;
                         margin: 5px;
-                        overflow: hidden;
+                        @include hidden;
                         text-overflow: ellipsis;
                       }
                   }
@@ -155,9 +134,31 @@
     }
 
 }
+/***** BOUCLE delay animation entré plats *****/
+@for $i from 1 to 11 
+{
+  .plat_#{$i} 
+  {
+    animation: menuanimation 0.7s ease-in-out forwards 0.20s*$i;
+  }
+}
+// .plat{
+//   &_1 {
+//     animation: menuanimation 0.7s ease-in-out forwards 0.15s;
+//   }
+//   &_2 {
+//     animation: menuanimation 0.7s ease-in-out forwards 0.3s;
+//   }
+//   &_3 {
+//     animation: menuanimation 0.7s ease-in-out forwards 0.45s;
+//   }
+//   &_4 {
+//     animation: menuanimation 0.7s ease-in-out forwards 0.5s;
+//   }
+// }
 @keyframes menuanimation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {

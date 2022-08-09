@@ -6,6 +6,10 @@
     border-radius: 20px;
 }
 
+@mixin hidden{
+    overflow: hidden;
+}
+
 @mixin img-ratio {
     height: 250px;
     border-radius: 0;

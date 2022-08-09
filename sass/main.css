@@ -118,6 +118,11 @@ footer h4 {
 footer ul {
   list-style-type: none;
 }
+@media screen and (min-width: 600px) {
+  footer ul {
+    display: inline-block;
+  }
+}
 footer ul a {
   color: #fff;
   width: -webkit-fit-content;
@@ -131,6 +136,16 @@ footer ul a {
 footer ul a i {
   margin-right: 10px;
   width: 18px;
+}
+@media screen and (min-width: 600px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    text-align: start;
+  }
 }
 
 .formulaireDecouverte {
@@ -280,9 +295,9 @@ footer ul a i {
   from {
     opacity: 1;
   }
-  99% {
+  to {
     opacity: 0;
-    top: 0;
+    /*top: 0;*/
   }
   to {
     top: -100vh;
@@ -292,9 +307,9 @@ footer ul a i {
   from {
     opacity: 1;
   }
-  99% {
+  to {
     opacity: 0;
-    top: 0;
+    /*top: 0;*/
   }
   to {
     top: -100vh;
@@ -381,6 +396,11 @@ footer ul a i {
   width: 75%;
   margin: 20px;
 }
+@media screen and (min-width: 600px) {
+  .sectionRestaurants__card-new {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .sectionRestaurants__card-new {
     width: 35%;
@@ -405,11 +425,7 @@ footer ul a i {
   background-color: #fff;
   width: 100%;
   margin: 10px;
-}
-@media screen and (min-width: 1024px) {
-  .sectionRestaurants__conteneur-articles .info-resto {
-    max-width: 550px;
-  }
+  max-width: 550px;
 }
 .sectionRestaurants__conteneur-articles .img-resto {
   width: 100%;
@@ -418,6 +434,11 @@ footer ul a i {
   height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media screen and (min-width: 600px) {
+  .sectionRestaurants__conteneur-articles .img-resto {
+    height: 200px;
+  }
 }
 .sectionRestaurants__description {
   padding: 10px;
@@ -543,7 +564,6 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   flex-direction: column;
 }
 .main .section_bloc .carte_plat {
@@ -558,11 +578,7 @@ footer ul a i {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   display: flex;
   align-items: center;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  -webkit-animation: menuanimation 3s both;
-          animation: menuanimation 3s both;
 }
 .main .section_bloc .carte_plat:hover .carte_plat_okmenu {
   width: 80px;
@@ -570,22 +586,6 @@ footer ul a i {
 .main .section_bloc .carte_plat:hover .carte_plat_okmenu i {
   transform: rotateZ(-360deg);
   transition: 0.3s;
-}
-.main .section_bloc .carte_plat .plat_1 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.main .section_bloc .carte_plat .plat_2 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.main .section_bloc .carte_plat .plat_3 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.main .section_bloc .carte_plat .plat_4 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
 }
 .main .section_bloc .carte_plat_prix {
   width: 15%;
@@ -627,9 +627,60 @@ footer ul a i {
   text-overflow: ellipsis;
 }
 
+/***** BOUCLE delay animation entré plats *****/
+.plat_1 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 0.2s;
+          animation: menuanimation 0.7s ease-in-out forwards 0.2s;
+}
+
+.plat_2 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 0.4s;
+          animation: menuanimation 0.7s ease-in-out forwards 0.4s;
+}
+
+.plat_3 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 0.6s;
+          animation: menuanimation 0.7s ease-in-out forwards 0.6s;
+}
+
+.plat_4 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 0.8s;
+          animation: menuanimation 0.7s ease-in-out forwards 0.8s;
+}
+
+.plat_5 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 1s;
+          animation: menuanimation 0.7s ease-in-out forwards 1s;
+}
+
+.plat_6 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 1.2s;
+          animation: menuanimation 0.7s ease-in-out forwards 1.2s;
+}
+
+.plat_7 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 1.4s;
+          animation: menuanimation 0.7s ease-in-out forwards 1.4s;
+}
+
+.plat_8 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 1.6s;
+          animation: menuanimation 0.7s ease-in-out forwards 1.6s;
+}
+
+.plat_9 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 1.8s;
+          animation: menuanimation 0.7s ease-in-out forwards 1.8s;
+}
+
+.plat_10 {
+  -webkit-animation: menuanimation 0.7s ease-in-out forwards 2s;
+          animation: menuanimation 0.7s ease-in-out forwards 2s;
+}
+
 @-webkit-keyframes menuanimation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {
@@ -640,7 +691,7 @@ footer ul a i {
 
 @keyframes menuanimation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {

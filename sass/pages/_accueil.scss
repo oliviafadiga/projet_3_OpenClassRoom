@@ -49,9 +49,9 @@
   from {
     opacity: 1;
   }
-  99% {
+  to {
     opacity: 0;
-    top: 0;
+    /*top: 0;*/
   }
   to {
     top: -100vh;
@@ -127,7 +127,11 @@
         position: absolute;
         width: 75%;
         margin: 20px; 
-        @include desktop-only{
+        
+         @include table-only{
+          width: 60%;
+         }
+         @include desktop-only{
           width: 35%;
          }
 
@@ -150,9 +154,8 @@
             background-color: $colour-white;
             width: 100%;
             margin: 10px;
-            @include desktop-only{
               max-width: 550px;
-             }
+             
             
           }
           .img-resto{
@@ -161,6 +164,10 @@
             height: 150px;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
+            @include table-only{
+              height: 200px;
+             }
+             
           }
     
     }

@@ -10,6 +10,10 @@
         color:$colour-white;
       }
       ul {
+        @include table-only{
+          display: inline-block;
+         } 
+
         list-style-type: none;
         a {
             color: $colour-white;
@@ -23,6 +27,12 @@
                 width: 18px;
               }
           }
-      }  
+      } 
+      @include table-only{
+        text-align: center;
+       } 
+       @include desktop-only{
+        text-align: start;
+       } 
   }
 
