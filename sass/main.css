@@ -567,6 +567,7 @@ footer ul a i {
   flex-direction: column;
 }
 .main .section_bloc .carte_plat {
+  opacity: 0;
   width: 100%;
   max-width: 680px;
   height: 70px;

@@ -71,6 +71,7 @@
             @include align-center-center;
             flex-direction: column;
             &_plat {
+              opacity: 0;
                 width: 100%;
                 max-width: 680px;
                 height: 70px;
