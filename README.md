@@ -12,7 +12,7 @@ les clients pourront composer le menu de leur repas pour que les plats soient pr
 
 ## Site hébergé
 
-Cliquez-ici [ohmyfood](https://oliviafadiga.github.io/index.html) pour voir le site.
+Cliquez-ici [ohmyfood](https://oliviafadiga.github.io/) pour voir le site.
 
 ## Table des matières 
 
