@@ -167,6 +167,12 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
+.formulaireDecouverte .formulaire .champTxt {
+  border: none;
+  background-color: #d8dad9;
+  font-size: 18px;
+  max-width: 130px;
+}
 .formulaireDecouverte__btn {
   width: 200px;
   height: 40px;
